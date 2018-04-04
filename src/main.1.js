@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var point_1 = require("./point");
+var like_1 = require("./like");
+var point = new point_1.Point(1, 2);
+point.y = 4;
+point.x = 3;
+point.draw();
+console.log('x: ' + point.x, 'y: ' + point.y);
+var like = new like_1.Like(1, false);
+like.onClickLike();

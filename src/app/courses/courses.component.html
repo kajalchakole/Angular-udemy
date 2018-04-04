@@ -1,0 +1,28 @@
+<p>
+  courses works!
+</p>
+
+<h2>{{title}}</h2>
+<!-- <img src="{{ imageUrl }}" /> -->
+<img [src]="imageUrl" />
+<table>
+  <tr>
+    <td [attr.colspan]="colSpan"> </td>
+  </tr>
+</table>
+<button (click)="onSave()" [style.background]="isActive ? 'bule' : 'white'">Save</button>
+<button class="btn btn-primary" [class.active]="isActive" >Active</button>
+<div (click)="onDivClick()">
+  <button (click)="onCancel($event)">Cancel</button>
+</div>
+<input #sample (keyup.enter)="onKeyUp(sample.value)" />
+<input [(ngModel)]="email" (keyup.enter)="onKeyEnter()" />
+<hr><br>
+{{ course.title | uppercase}}<br/>
+{{ course.students | number}} <br/>
+{{ course.rating | number:'2.1-1'}}<br/>
+{{ course.price | currency:'AUD':true:'3.2-2'}}<br/>
+{{ course.releaseDate | date:shortDate}}<br/>
+{{ course.summaryText | summary }}<br/>
+
+
