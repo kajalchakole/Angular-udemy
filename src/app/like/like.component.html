@@ -1,8 +1,11 @@
-<i class="fa fa-2x fa-heart-o" 
-[class.fa-heart-o]='!isLiked' 
-[class.fa-heart]='isLiked'
+<i class="fa fa-2x" 
+[ngClass]="{
+    'fa-heart':isLiked,
+    'fa-heart-o':!isLiked
+}"
+
 (click)="onLiked()"></i>
 
-<span>
+<span >
     {{ likesCount }}
 </span>

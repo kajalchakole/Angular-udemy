@@ -18,6 +18,11 @@ export class AppComponent {
     likesCount: 10
   }
 
+  task = {
+    title : 'Review Application',
+    assignee : null
+  }
+
   onFavoriteChanged(eventArgs: FavoriteChangedEventArgs){
     console.log("Favorite changed ", eventArgs.newValue);
   }
@@ -40,5 +45,17 @@ export class AppComponent {
 
   onUpdate(course){
     course.name = "updated";
+  }
+
+  loadCourses(){
+    this.courses = [
+      { name: "course1", id: 1},
+      { name: "course2", id: 2},
+      { name: "course3", id: 3}
+    ];
+  }
+
+  trackCourse(index, course){
+    return course ? course.id : undefined;
   }
 }

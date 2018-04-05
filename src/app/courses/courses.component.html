@@ -10,7 +10,10 @@
     <td [attr.colspan]="colSpan"> </td>
   </tr>
 </table>
-<button (click)="onSave()" [style.background]="isActive ? 'bule' : 'white'">Save</button>
+<button (click)="onSave()" class="btn btn-primary" [style.color]="isActive ? 'white' : 'black'"
+[ngStyle]="{
+  'background': isActive ? 'blue' : 'white'
+}">Save</button>
 <button class="btn btn-primary" [class.active]="isActive" >Active</button>
 <div (click)="onDivClick()">
   <button (click)="onCancel($event)">Cancel</button>

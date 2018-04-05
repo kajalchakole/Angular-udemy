@@ -9,15 +9,16 @@
     <div class="body">Body</div>
 </app-panel> -->
 
-<like [is-liked]='tweet.isLiked' [likes-count]='tweet.likesCount'></like>
+<!-- <like [is-liked]='tweet.isLiked' [likes-count]='tweet.likesCount'></like>
 <br><hr>
 
+<button (click)="loadCourses()">Load</button>
 
 <div *ngIf="courses.length>0; then courseList else noCourses"></div>
 <ng-template #courseList>
     List of courses <button (click)="onAdd()">Add</button>
     <ul>
-        <li *ngFor = "let course of courses; index as i; even as isEven">
+        <li *ngFor = "let course of courses; index as i; even as isEven; trackBy: trackCourse">
         {{i}}  -  {{course.name}} <span *ngIf="isEven">Even</span> <button (click)="onRemove(course)">Remove</button> 
         <button (click)="onUpdate(course)">Update</button>
         </li>
@@ -43,3 +44,14 @@
     <div *ngSwitchCase="'list'">List Mode</div>
     <div *ngSwitchDefault> Otherwise</div>
 </div> 
+
+<span #safeTraversal>{{ task.assignee?.name }}</span>
+<input type="text" [appInputFormat]="'uppercase'"> -->
+<!-- 
+<zippy title="Shipping Details">
+    Shipping Details Contents
+</zippy> -->
+
+<contact-form>
+    
+</contact-form>
