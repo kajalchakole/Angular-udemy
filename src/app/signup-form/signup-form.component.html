@@ -8,6 +8,8 @@
             class="form-control">
             <div class="alert alert-danger" [hidden]="!username.touched || username.valid">
               <div [hidden]="!username.errors?.required">Field is required</div>
+              <div [hidden]="username.errors?.shouldBeUnique">Username already taken.</div>
+              <div [hidden]="!username.errors?.required">Field is required</div>
               <div [hidden]="username.errors?.cannotContainSpace">Cannot contain space</div>
               <div [hidden]="!username.errors?.minlength">Minimum {{ username.errors?.minlength?.requiredLength }} chars required</div>
             </div>
