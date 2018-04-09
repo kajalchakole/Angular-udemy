@@ -16,6 +16,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { NewCourseFormComponentComponent } from './new-course-form-component/new-course-form-component.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     ZippyComponent,
     ContactFormComponent,
     NewCourseFormComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    NewCourseFormComponentComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
