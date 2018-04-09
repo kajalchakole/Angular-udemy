@@ -3,9 +3,9 @@ import { resolve } from "url";
 import { reject } from "q";
 
 export class UsernameValidators {
-    static cannnotContainSpace(control : AbstractControl) : ValidationErrors | null {
+    static cannotContainSpace(control : AbstractControl) : ValidationErrors | null {
         if((control.value as string).indexOf(' ') >= 0)
-            return { cannnotContainSpace : true};
+            return { cannotContainSpace : true};
         return null;
     }
 
